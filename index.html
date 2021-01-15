@@ -21,6 +21,12 @@
         <!-- so rememver that v-bind is not only can be used to href or value, many things can be binded 
         https://v1.vuejs.org/guide/syntax.html -->
 
+
+        <!-- we can't do this, because if we do as below we'll just show the string tag -->
+        {{websiteTag}}
+
+        <!-- to show an element like websiteTag (that contain a html tag), we can do as below -->
+        <p v-html="websiteTag"></p>
     </div>
     <script src="app.js"></script>
 </body>

@@ -4,6 +4,7 @@ new Vue({
     name: "Wildan",
     job: "help people get their job",
     website: "http://wildank.blogspot.com",
+    websiteTag: '<a href="http://wildank.blogspot.com">Wildank Website',
   },
   methods: {
     greet: function (user) {
