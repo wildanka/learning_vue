@@ -3,6 +3,7 @@ new Vue({
   data: {
     name: "Wildan",
     job: "help people get their job",
+    website: "http://wildank.blogspot.com",
   },
   methods: {
     greet: function (user) {

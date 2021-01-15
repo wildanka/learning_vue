@@ -9,14 +9,19 @@
 </head>
 <body>
     <div id="vue-app">
-        <h1>{{ greet('michael') }}</h1>
-        <p>Name : {{name}}</p>
-        <p>Job : {{job}}</p>
-    </div>
+        <h1>DataBinding</h1>
+        <a href="website">Wildank Blog</a>
+        <!-- this below won't work because it's going to go to href="{{website}}" -->
+        <a href="{{website}}">Wildank Blog</a>
 
-    <!-- this line below, won't show vue-app.name, 
-        because it's outside vue-app id, while we only handle el (element with id #vue-app) -->
-    {{name}} 
+        <!-- to make it work, we use Data Binding -->
+        <a v-bind:href="website">Wildank Blog</a>
+        <input type="text" v-bind:value="name">
+
+        <!-- so rememver that v-bind is not only can be used to href or value, many things can be binded 
+        https://v1.vuejs.org/guide/syntax.html -->
+
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
