@@ -6,7 +6,7 @@ new Vue({
   },
   methods: {
     greet: function (user) {
-      return "Good Morning, " + user;
+      return "Good Morning, " + user + ". I am " + this.name;
     },
   },
 });
