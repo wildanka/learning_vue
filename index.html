@@ -22,7 +22,8 @@
         <!-- https://v1.vuejs.org/guide/events.html#Event-Modifiers 
             normally, this element will take us to the web inside href property when we click.
          -->
-        <a @click="showAlert" href="http://www.wildank.blogspot.com">Wildank Blogspot</a>
+         <!-- but we can prevent the default action with .prevent keywords -->
+        <a @click.prevent="showAlert" href="http://www.wildank.blogspot.com">Wildank Blogspot</a>
     </div>
     <script src="app.js"></script>
 </body>
