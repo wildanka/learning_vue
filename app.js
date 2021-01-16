@@ -12,11 +12,11 @@ new Vue({
       return "Good Morning, " + user + ". I am " + this.name;
     },
 
-    add: function () {
-      this.age++;
+    add: function (inc) {
+      this.age += inc;
     },
-    subtract: function () {
-      this.age--;
+    subtract: function (dec) {
+      this.age -= dec;
     },
   },
 });
