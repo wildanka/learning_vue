@@ -9,24 +9,10 @@
 </head>
 <body>
     <div id="vue-app">
-        <h1>DataBinding</h1>
-        <a href="website">Wildank Blog</a>
-        <!-- this below won't work because it's going to go to href="{{website}}" -->
-        <a href="{{website}}">Wildank Blog</a>
-
-        <!-- to make it work, we use Data Binding -->
-        <a v-bind:href="website">Wildank Blog</a>
-        <input type="text" v-bind:value="name">
-
-        <!-- so rememver that v-bind is not only can be used to href or value, many things can be binded 
-        https://v1.vuejs.org/guide/syntax.html -->
-
-
-        <!-- we can't do this, because if we do as below we'll just show the string tag -->
-        {{websiteTag}}
-
-        <!-- to show an element like websiteTag (that contain a html tag), we can do as below -->
-        <p v-html="websiteTag"></p>
+        <h1>Events</h1>
+        <button v-on:click="age++">Add a Year</button>
+        <button v-on:click="age--">Subtract a Year</button>
+        <p>My age is {{age}}</p>
     </div>
     <script src="app.js"></script>
 </body>
