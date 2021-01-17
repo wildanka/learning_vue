@@ -9,64 +9,26 @@
 </head>
 <body>
     <div id="vue-app">
-        <h1>Looping through list</h1>
-        {{characters[0]}}
+        <!-- bag image-->
+        <!-- call burst only if ended is true -->
+        <div id="bag" v-bind:class="{burst: ended}"></div>
 
-        <ul>
-            <li v-for="char in characters">{{char}}</li>
-        </ul>
 
-        <table border="true">
-            <thead>
-                <tr>
-                    <td>No</td>
-                    <td>Name</td>
-                    <td>Age</td>
-                </tr>
-            </thead>
-            <tr v-for="(ninja, index) in ninjas">
-                <td>{{index}}</td>
-                <td>{{ninja.name}}</td>
-                <td>{{ninja.age}}</td>
-            </tr>
-        </table>
-
-        <!-- Let's inspect this two kind of things with template -->
-        <!-- this -->
-        <div v-for="(ninja, index) in ninjas">
-            <h3>{{ninja.name}}</h3>
-            <p>{{ninja.age}}</p>
-        </div>
-        <!-- with this -->
-========================================================
-        <template v-for="(ninja, index) in ninjas">
-            <h3>{{ninja.name}}</h3>
-            <p>{{ninja.age}}</p>
-        </template>
-        ========================================================
-
-        <template v-for="ninja in ninjas">
-            <div v-for="(val,key) in ninja">
-                <p>{{key}} - {{val}}</p>
+        <!-- bag health -->
+        <div>
+            <div id="bag-health">
+                <div class="bar" v-bind:style="{width: health + '%'}"></div>
             </div>
-        </template>
+            <p id="label_health">{{health}} %</p>
+        </div>
 
-========================================================
 
-    <table border="true">
-        <thead>
-            <tr>
-                <td>No</td>
-                <td v-for="(val, name) in ninjas[0]">{{name}}</td>
-            </tr>
-        </thead>
-        <tr v-for="(ninja, index) in ninjas">
-            <td>{{index}}</td>
-            <td>{{ninja.name}}</td>
-            <td>{{ninja.age}}</td>
-        </tr>
-    </table>
-
+        <!-- controls -->
+        <div id="controls">
+            <br>
+            <button v-on:click="punch" v-show="!ended">Punch</button>
+            <button v-on:click="restart">Reset</button>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
