@@ -8,27 +8,16 @@
     <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
-    <div id="vue-app">
-        <!-- bag image-->
-        <!-- call burst only if ended is true -->
-        <div id="bag" v-bind:class="{burst: ended}"></div>
+    <div id="vue-app-one">
+      <h1>{{title}}</h1>  
+      <p>{{greet}}</p>
+      <button v-on:click="changeTitle">Change App two Title</button>
+    </div>
 
-
-        <!-- bag health -->
-        <div>
-            <div id="bag-health">
-                <div class="bar" v-bind:style="{width: health + '%'}"></div>
-            </div>
-            <p id="label_health">{{health}} %</p>
-        </div>
-
-
-        <!-- controls -->
-        <div id="controls">
-            <br>
-            <button v-on:click="punch" v-show="!ended">Punch</button>
-            <button v-on:click="restart">Reset</button>
-        </div>
+    <div id="vue-app-two">
+        <h1>{{title}}</h1>  
+        <p>{{greet}}</p>
+        <button v-on:click="changeTitle">Change App one Title</button>
     </div>
     <script src="app.js"></script>
 </body>
