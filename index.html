@@ -9,20 +9,10 @@
 </head>
 <body>
     <div id="vue-app">
-        <h1>Computed Properties</h1>
-        <button v-on:click="a++">Add to A</button>
-        <button v-on:click="b++">Add to B</button>
-        <p>A = {{a}}</p>
-        <p>B = {{b}}</p>
-        <!-- 
-            now open your browser console, and you will see that whenever addToA is called addToB will also be called
-            why? because whenever a value changed, method in vue will run them both (every method in it). even if technically we don't need to
-        -->
-        <!-- to use computed properties we only need to call the function without parenthesis (because if we do, it will be taken as method) -->
-        <p>Age + A = {{addToA}}</p>
-        <p>Age + B = {{addToB}}</p>
-        <!-- NOTES: when it comes to methods, VUEjs doesn't know which one that need to run depending on what has updated  -->
-        <!-- NOTES: but computed properties do, they kind of watch the variables that they need to be computed to be calculated. and they only run when needed  -->
+        <h1>Dynamic CSS</h1>
+        <h2>Example 1</h2>
+        <div v-bind:class="{red: true, blue: true}"></div> <!-- you can se it's class using browser inspect element-->
+        <h2>Example 2</h2>
     </div>
     <script src="app.js"></script>
 </body>
