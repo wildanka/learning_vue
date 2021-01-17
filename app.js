@@ -10,6 +10,13 @@ new Vue({
     websiteTag: '<a href="http://wildank.blogspot.com">Wildank Website',
   },
   methods: {
+    logName: function () {
+      console.log("you entered your name");
+    },
+    logAge: function () {
+      console.log("you entered your age");
+    },
+
     greet: function (user) {
       return "Good Morning, " + user + ". I am " + this.name;
     },
