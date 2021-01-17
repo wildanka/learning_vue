@@ -3,7 +3,7 @@ new Vue({
   data: {},
   methods: {
     readRefs: function () {
-      //so refs.
+      //so refs do catch the dom of the 'refs'-es element
       console.log(this.$refs);
     },
   },
