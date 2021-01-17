@@ -11,10 +11,18 @@
     <div id="vue-app">
         <h1>Dynamic CSS</h1>
         <h2>Example 1</h2>
-        <div v-bind:class="{available: available}"> <!-- you can se it's class using browser inspect element-->
+        <!-- add v-on:click and manipulate available data on clicked -->
+         <!-- you can se it's class using browser inspect element-->
+        <!-- <div v-on:click="available = !available" v-bind:class="{available: available}">
+            <span>Ryu</span>
+        </div>  -->
+        <h2>Example 2</h2>
+        <button @click="nearby = !nearby">Toggle nearby</button>
+        <button @click="available = !available">Toggle available</button>
+        <!-- you can se it's class using browser inspect element-->
+        <div v-bind:class="compClasses"> 
             <span>Ryu</span>
         </div> 
-        <h2>Example 2</h2>
     </div>
     <script src="app.js"></script>
 </body>
