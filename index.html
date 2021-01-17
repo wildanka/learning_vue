@@ -30,6 +30,43 @@
                 <td>{{ninja.age}}</td>
             </tr>
         </table>
+
+        <!-- Let's inspect this two kind of things with template -->
+        <!-- this -->
+        <div v-for="(ninja, index) in ninjas">
+            <h3>{{ninja.name}}</h3>
+            <p>{{ninja.age}}</p>
+        </div>
+        <!-- with this -->
+========================================================
+        <template v-for="(ninja, index) in ninjas">
+            <h3>{{ninja.name}}</h3>
+            <p>{{ninja.age}}</p>
+        </template>
+        ========================================================
+
+        <template v-for="ninja in ninjas">
+            <div v-for="(val,key) in ninja">
+                <p>{{key}} - {{val}}</p>
+            </div>
+        </template>
+
+========================================================
+
+    <table border="true">
+        <thead>
+            <tr>
+                <td>No</td>
+                <td v-for="(val, name) in ninjas[0]">{{name}}</td>
+            </tr>
+        </thead>
+        <tr v-for="(ninja, index) in ninjas">
+            <td>{{index}}</td>
+            <td>{{ninja.name}}</td>
+            <td>{{ninja.age}}</td>
+        </tr>
+    </table>
+
     </div>
     <script src="app.js"></script>
 </body>
