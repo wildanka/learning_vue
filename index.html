@@ -8,16 +8,15 @@
     <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
+    <h1>Components</h1>
     <div id="vue-app-one">
-      <h1>{{title}}</h1>  
-      <p>{{greet}}</p>
-      <button v-on:click="changeTitle">Change App two Title</button>
+      <h2>Vue App One</h2>  
+      <greeting></greeting>
     </div>
 
     <div id="vue-app-two">
-        <h1>{{title}}</h1>  
-        <p>{{greet}}</p>
-        <button v-on:click="changeTitle">Change App one Title</button>
+      <h2>Vue App Two</h2>  
+      <greeting></greeting>
     </div>
     <script src="app.js"></script>
 </body>

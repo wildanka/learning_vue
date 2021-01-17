@@ -1,38 +1,26 @@
+Vue.component("greeting", {
+  template: "<p>Hey there, I'm {{name}}</p>",
+  /**
+   * everytime we called this component data,
+   * if we only return the data, it will only create a single Vue.component instances (like static variable in java)
+   * else if we return the function, then we will have an instances from it's function not the components (like using new in java)
+   */
+  data: function () {
+    return {
+      name: "Yoshi",
+    };
+  },
+});
+
 var one = new Vue({
   el: "#vue-app-one",
-  data: {
-    title: "Vue App One",
-  },
-  methods: {
-    changeTitle: function () {
-      two.title = "This is One hacked Two";
-    },
-  },
-  computed: {
-    greet: function () {
-      return "Hello from app one";
-    },
-  },
 });
 
 var two = new Vue({
   el: "#vue-app-two",
-  data: {
-    title: "Vue App Two",
-  },
-  methods: {
-    changeTitle: function () {
-      one.title = "Title Changed";
-    },
-  },
-  computed: {
-    greet: function () {
-      return "Yo masbroo, disini app two";
-    },
-  },
 });
 
-two.title = "Changed from outside";
+// two.title = "Changed from outside";
 
 /**
  * if one day you found yourself having so many Vue Instances and there is to much communication between them
