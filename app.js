@@ -3,39 +3,20 @@ new Vue({
   data: {
     name: "Wildan",
     age: 25,
-    x: 0,
-    y: 0,
+    a: 0,
+    b: 0,
     job: "help people get their job",
     website: "http://wildank.blogspot.com",
     websiteTag: '<a href="http://wildank.blogspot.com">Wildank Website',
   },
   methods: {
-    logName: function () {
-      console.log("you entered your name");
+    addToA: function () {
+      console.log("addToA");
+      return this.age + this.a;
     },
-    logAge: function () {
-      console.log("you entered your age");
-    },
-
-    greet: function (user) {
-      return "Good Morning, " + user + ". I am " + this.name;
-    },
-
-    add: function (inc) {
-      this.age += inc;
-    },
-    subtract: function (dec) {
-      this.age -= dec;
-    },
-
-    updateXY: function (event) {
-      console.log(event);
-      this.x = event.offsetX;
-      this.y = event.offsetY;
-    },
-
-    showAlert: function () {
-      alert("aww, you just clicked me");
+    addToB: function () {
+      console.log("addToB");
+      return this.age + this.b;
     },
   },
 });
