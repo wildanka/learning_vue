@@ -3,16 +3,13 @@ new Vue({
   data: {
     error: false,
     success: false,
+    characters: ["Mario", "Luigi", "Yoshi", "Bower"],
+    ninjas: [
+      { name: "Naruto", age: 35 },
+      { name: "Sasuke", age: 33 },
+      { name: "Sakura", age: 32 },
+    ],
   },
   methods: {},
-  computed: {
-    /*    addToA: function () {
-      console.log("addToA");
-      return this.age + this.a;
-    },
-    addToB: function () {
-      console.log("addToB");
-      return this.age + this.b;
-    }, */
-  },
+  computed: {},
 });

@@ -9,17 +9,27 @@
 </head>
 <body>
     <div id="vue-app">
-        <h1>Conditional</h1>
-        <!-- just try it yourself, it should be easy to understand ;) -->
-        <button v-on:click="error = !error">Toggle Error</button>
-        <button v-on:click="success = !success">Toggle Success</button>
-        <p v-if="error">an Error Occurred</p>
-        <p v-else-if="success">Success</p>
-        <!-- <p v-show="error">an Error Occurred</p>
-        <p v-show="success">Success</p> -->
-        <!-- NOTE: there is subtle differences when we use v-show versus v-else-if. 
-        v-if & v-else-if will remove element from the html if it's not going to be shown, on the other hand
-        v-show will add style="display: none" to the element that is not shown -->
+        <h1>Looping through list</h1>
+        {{characters[0]}}
+
+        <ul>
+            <li v-for="char in characters">{{char}}</li>
+        </ul>
+
+        <table border="true">
+            <thead>
+                <tr>
+                    <td>No</td>
+                    <td>Name</td>
+                    <td>Age</td>
+                </tr>
+            </thead>
+            <tr v-for="(ninja, index) in ninjas">
+                <td>{{index}}</td>
+                <td>{{ninja.name}}</td>
+                <td>{{ninja.age}}</td>
+            </tr>
+        </table>
     </div>
     <script src="app.js"></script>
 </body>
