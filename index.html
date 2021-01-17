@@ -11,9 +11,9 @@
     <div id="vue-app">
         <h1>Keyboard Events</h1>
         <label>Name </label>
-        <input type="text" @keyup="logName"/>
+        <input type="text" @keyup.enter="logName"/> <!-- the logName method will only be called if "enter" button on keyboard pressed-->
         <label>Age </label>
-        <input type="text" @keyup="logAge"/>
+        <input type="text" @keyup.enter="logAge"/><!-- the logAge method will only be called if "enter" button on keyboard pressed-->
     </div>
     <script src="app.js"></script>
 </body>
