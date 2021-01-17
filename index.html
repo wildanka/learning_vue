@@ -9,20 +9,11 @@
 </head>
 <body>
     <div id="vue-app">
-        <h1>Dynamic CSS</h1>
-        <h2>Example 1</h2>
-        <!-- add v-on:click and manipulate available data on clicked -->
-         <!-- you can se it's class using browser inspect element-->
-        <!-- <div v-on:click="available = !available" v-bind:class="{available: available}">
-            <span>Ryu</span>
-        </div>  -->
-        <h2>Example 2</h2>
-        <button @click="nearby = !nearby">Toggle nearby</button>
-        <button @click="available = !available">Toggle available</button>
-        <!-- you can se it's class using browser inspect element-->
-        <div v-bind:class="compClasses"> 
-            <span>Ryu</span>
-        </div> 
+        <h1>Conditional</h1>
+        <button v-on:click="error = !error">Toggle Error</button>
+        <button v-on:click="success = !success">Toggle Success</button>
+        <p v-if="error">an Error Occurred</p>
+        <p v-else-if="success">Success</p>
     </div>
     <script src="app.js"></script>
 </body>
