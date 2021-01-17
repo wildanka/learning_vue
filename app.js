@@ -11,7 +11,10 @@ Vue.component("greeting", {
   template:
     '<p>Hey there, I am {{name}} <button v-on:click="changeName">Change Name</button> </p>',
   data: function () {
-    return data;
+    return {
+      //that is why we create a new fresh object
+      name: "Yoshi",
+    };
   },
   methods: {
     changeName: function () {
