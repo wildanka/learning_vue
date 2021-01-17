@@ -1,3 +1,7 @@
+var data = {
+  name: "Yoshi",
+};
+
 /**
  * everytime we called this component data,
  * if we only return the data, it will only create a single Vue.component instances (like static variable in java)
@@ -7,9 +11,7 @@ Vue.component("greeting", {
   template:
     '<p>Hey there, I am {{name}} <button v-on:click="changeName">Change Name</button> </p>',
   data: function () {
-    return {
-      name: "Yoshi",
-    };
+    return data;
   },
   methods: {
     changeName: function () {
