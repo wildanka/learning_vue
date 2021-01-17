@@ -13,8 +13,13 @@
         <!-- just try it yourself, it should be easy to understand ;) -->
         <button v-on:click="error = !error">Toggle Error</button>
         <button v-on:click="success = !success">Toggle Success</button>
-        <p v-if="error">an Error Occurred</p>
-        <p v-if="success">Success</p>
+        <!-- <p v-if="error">an Error Occurred</p>
+        <p v-if="success">Success</p> -->
+        <p v-show="error">an Error Occurred</p>
+        <p v-show="success">Success</p>
+        <!-- NOTE: there is subtle differences when we use v-show versus v-else-if. 
+        v-if & v-else-if will remove element from the html if it's not going to be shown, on the other hand
+        v-show will add style="display: none" to the element that is not shown -->
     </div>
     <script src="app.js"></script>
 </body>
