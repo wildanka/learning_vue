@@ -1,0 +1,20 @@
+read about vue cli : https://github.com/vuejs/vue-cli
+read about vue cli : https://cli.vuejs.org/
+
+#1 make sure you have node installed on your machine
+
+#2 to install vue-cli call command below:  
+npm install -g vue-cli
+
+#3 create a new project using a webpack template (usually need to open cmd by 'run as administrator', need administrator access )
+vue init <template-name> <prooject-name>
+
+example:
+
+vue init webpack my-project
+
+
+webpack
+webpack-simple
+
+#4 after new project created 
