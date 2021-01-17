@@ -1,14 +1,20 @@
+/**
+ * everytime we called this component data,
+ * if we only return the data, it will only create a single Vue.component instances (like static variable in java)
+ * else if we return the function, then we will have an instances from it's function not the components (like using new in java)
+ */
 Vue.component("greeting", {
-  template: "<p>Hey there, I'm {{name}}</p>",
-  /**
-   * everytime we called this component data,
-   * if we only return the data, it will only create a single Vue.component instances (like static variable in java)
-   * else if we return the function, then we will have an instances from it's function not the components (like using new in java)
-   */
+  template:
+    '<p>Hey there, I am {{name}} <button v-on:click="changeName">Change Name</button> </p>',
   data: function () {
     return {
       name: "Yoshi",
     };
+  },
+  methods: {
+    changeName: function () {
+      this.name = "Mario";
+    },
   },
 });
 
