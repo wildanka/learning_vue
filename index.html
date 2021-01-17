@@ -11,10 +11,11 @@
     <div id="vue-app">
         <h1>Keyboard Events</h1>
         <label>Name </label>
-        <input type="text" @keyup.enter="logName"/> <!-- the logName method will only be called if "enter" button on keyboard pressed-->
+        <input type="text" v-model="name" />
+        <span>{{name}}</span>
         <label>Age </label>
-        <input type="text" @keyup.alt.enter="logAge"/><!-- the logAge method will only be called if "alt"+"enter" button on keyboard pressed-->
-        <!-- for more event, you can lookup here: https://v1.vuejs.org/guide/events.html#Key-Modifiers -->
+        <input type="text" v-model="age"/>
+        <span>{{age}}</span>
     </div>
     <script src="app.js"></script>
 </body>
