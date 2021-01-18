@@ -20,7 +20,8 @@ export default {
 }
 </script>
 
-<style>
+<!-- this will make the h1 element colored purple-->
+<style scoped>
 h1{
   color:purple
 }

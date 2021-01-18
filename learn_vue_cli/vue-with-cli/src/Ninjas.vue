@@ -23,7 +23,11 @@ export default {
 }
 </script>
 
-<style>
+<!-- and this will make the h1 element colored green, 
+but it will override the purple colored h1 on App.vue 
+you can check it on the Inspect Element on your web browsers-->
+<!-- by using scoped, you will make VueJs generate css id's for every element of the component, so it won't overriding each other-->
+<style scoped>
     h1{
       color:green
     }
