@@ -18,3 +18,9 @@ webpack
 webpack-simple
 
 #4 after new project created 
+
+#5 to run on dev environment
+-npm run dev
+
+#6 to build prod:
+-npm run build
