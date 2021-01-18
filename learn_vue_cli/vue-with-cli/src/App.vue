@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import Ninjas from './Ninjas.vue'
+// import Ninjas from './Ninjas.vue'
 export default {
-  components: { Ninjas }, // register the 'Ninjas' component that we got from the main.js (since App.vue is registered on main.js too)
+  // components: { Ninjas }, // register the 'Ninjas' component that we got from the main.js (since App.vue is registered on main.js too)
   data () {
     return {
       title: 'Ninja App!'
