@@ -1,13 +1,18 @@
 <template>
-  <app-header></app-header>
+  <div>
+    <app-header></app-header>
+    <app-footer></app-footer>
+  </div>
 </template>
 
 <script>
 import Header from './components/Headers.vue' //import components
+import Footer from './components/Footer.vue' //import components
 
 export default {
   components: { // add components
-    'app-header': Header //why not just use 'header' and not 'app-header'? because header is an html tag (remember <header>?) 
+    'app-header': Header, //why not just use 'header' and not 'app-header'? because header is an html tag (remember <header>?) 
+    'app-footer': Footer //why not just use 'header' and not 'app-header'? because header is an html tag (remember <header>?) 
   },
   data () {
     return {
