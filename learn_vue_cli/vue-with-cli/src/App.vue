@@ -8,29 +8,30 @@
 </template>
 
 <script>
-import Header from './components/Headers.vue' //import components
-import Footer from './components/Footer.vue' //import components
-import Ninjas from './components/Ninjas.vue' //import components
+import Header from "./components/Headers.vue"; //import components
+import Footer from "./components/Footer.vue"; //import components
+import Ninjas from "./components/Ninjas.vue"; //import components
 
 export default {
-  components: { // add components
-    'app-header': Header, //why not just use 'header' and not 'app-header'? because header is an html tag (remember <header>?) 
-    'app-footer': Footer, //why not just use 'header' and not 'app-header'? because header is an html tag (remember <header>?) 
-    'ninjas': Ninjas //why not just use 'header' and not 'app-header'? because header is an html tag (remember <header>?) 
+  components: {
+    // add components
+    "app-header": Header, //why not just use 'header' and not 'app-header'? because header is an html tag (remember <header>?)
+    "app-footer": Footer, //why not just use 'header' and not 'app-header'? because header is an html tag (remember <header>?)
+    ninjas: Ninjas, //why not just use 'header' and not 'app-header'? because header is an html tag (remember <header>?)
   },
-  data () {
+  data() {
     return {
-         ninjas: [
-            {name: 'Ryu', specialty:'Vue Components', show: false},
-            {name: 'Crystal', specialty:'HTML Wizard', show: false},
-            {name: 'Hiroshi', specialty:'Click Events', show: false},
-            {name: 'Takagi', specialty:'Conditionals', show: false},
-            {name: 'Wataru', specialty:'Webpack', show: false},
-            {name: 'Sato', specialty:'Data Diggin', show: false},
-        ]
-    }
-  }
-}
+      ninjas: [
+        { name: "Ryu", specialty: "Vue Components", show: false },
+        { name: "Crystal", specialty: "HTML Wizard", show: false },
+        { name: "Hiroshi", specialty: "Click Events", show: false },
+        { name: "Takagi", specialty: "Conditionals", show: false },
+        { name: "Wataru", specialty: "Webpack", show: false },
+        { name: "Sato", specialty: "Data Diggin", show: false },
+      ],
+    };
+  },
+};
 </script>
 
 <style>
