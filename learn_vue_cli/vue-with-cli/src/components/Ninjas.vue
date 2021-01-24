@@ -1,7 +1,8 @@
 <!-- create a Ninjas component-->
 <template>
   <div id="ninjas">
-      <p>{{ninjas}}</p>
+      <!-- thhe props that we sent, can be used inside a method, just like data -->
+      <p>{{test()}}</p>
       <ul>
           <li v-for="(ninja) in ninjas" v-on:click="ninja.show = !ninja.show" v-bind:key="ninja.name">
               <h2>{{ninja.name}}</h2>
@@ -20,6 +21,11 @@ export default {
     return {
     
     }
+  },
+  methods: {
+      test: function(){
+          console.log(this.ninjas) 
+      }
   }
 }
 </script>
