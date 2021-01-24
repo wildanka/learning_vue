@@ -24,6 +24,7 @@ export default {
   },
   data() {
     return {
+      //Reference Type in props are Objects and Arrays
       ninjas: [
         { name: "Ryu", specialty: "Vue Components", show: false },
         { name: "Crystal", specialty: "HTML Wizard", show: false },
@@ -32,7 +33,7 @@ export default {
         { name: "Wataru", specialty: "Webpack", show: false },
         { name: "Sato", specialty: "Data Diggin", show: false },
       ],
-      title: "Vue Ninjas", //this is (String is a primitive type)
+      title: "Vue Ninjas", //Primitive Type in props are String, Number, and Boolean
     };
   },
 };
