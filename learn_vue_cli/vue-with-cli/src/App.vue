@@ -1,11 +1,12 @@
 <template>
   <div>
-    <app-header></app-header>
+    <app-header v-bind:title="title"></app-header>
     <!-- to send data that is dynamic, we got to use v-bind: -->
     <ninjas v-bind:ninjas="ninjas"></ninjas>
     <hr />
     <ninjas v-bind:ninjas="ninjas"></ninjas>
-    <app-footer></app-footer>
+    <app-header v-bind:title="title"></app-header>
+    <!-- <app-footer v-bind:title="title"></app-footer> -->
   </div>
 </template>
 
@@ -31,6 +32,7 @@ export default {
         { name: "Wataru", specialty: "Webpack", show: false },
         { name: "Sato", specialty: "Data Diggin", show: false },
       ],
+      title: "Vue Ninjas", //this is (String is a primitive type)
     };
   },
 };

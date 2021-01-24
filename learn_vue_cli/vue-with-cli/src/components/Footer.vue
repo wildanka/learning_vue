@@ -1,28 +1,31 @@
 <!-- create a footers component-->
 <template>
   <footer>
-      <p>{{copyright}}</p>
+    <p>{{ copyright }} {{ title }}</p>
   </footer>
 </template>
 <script>
-
-
 export default {
-  data () {
+  props: {
+    title: {
+      type: String,
+    },
+  },
+  data() {
     return {
-        copyright: 'Copyright 2020 Vue Wildan'
-    }
-  }
-}
+      copyright: "Copyright 2020 Wildan",
+    };
+  },
+};
 </script>
 
 <style scoped>
-footer{
-    background: #222;
-    padding:6px;
+footer {
+  background: #222;
+  padding: 6px;
 }
-p{
-    color: lightgreen;
-    text-align: center;
+p {
+  color: lightgreen;
+  text-align: center;
 }
 </style>
