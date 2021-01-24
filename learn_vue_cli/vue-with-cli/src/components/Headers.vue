@@ -1,31 +1,39 @@
 <!-- create a headers component-->
 <template>
-  <!-- #2 make the trigger to call the events from child to parents -->
   <header v-on:click="changeTitle">
     <h1>{{ title }}</h1>
   </header>
 </template>
 
 <script>
+// #2 import the eventBus 'bus'
+import { bus } from "../main";
+
 export default {
   props: {
-    title: {
-      type: String,
-    },
+    // title: {
+    //   type: String,
+    // },
   },
   data() {
     return {
-      // title: "Vue Ninjas",
+      title: "Vue Ninjas",
     };
   },
   methods: {
     changeTitle: function () {
+      // this.$emit("changeTitle", "Vue Wizards");
       /**
-       * as we know the primitives object won't update reference.
-       * So in case we want to adopt that behavior in primitive types, we can do it via event
-       * #1 create a function that call emit events
+       * rather than update everything via props (App.vue),
+       * we can also trigger update from child to another child directly
+       * this can be done via EventBus
+       *
+       * Event Bus is Actually just a Vue Instance
        */
-      this.$emit("changeTitle", "Vue Wizards");
+      const newTitle = "Vue Wizards";
+      this.title = newTitle;
+      // #3 trigger event bus emit to 'titleChanged' event
+      bus.$emit("titleChanged", newTitle);
     },
   },
 };
