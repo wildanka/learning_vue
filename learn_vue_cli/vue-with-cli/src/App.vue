@@ -1,7 +1,8 @@
 <template>
   <div>
     <app-header></app-header>
-    <ninjas ninjas="ninjas123"></ninjas>
+    <!-- to send data that is dynamic, we got to use v-bind: -->
+    <ninjas v-bind:ninjas="ninjas"></ninjas>
     <app-footer></app-footer>
   </div>
 </template>
