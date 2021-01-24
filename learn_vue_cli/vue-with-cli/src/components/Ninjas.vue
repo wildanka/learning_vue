@@ -12,6 +12,8 @@
         <h3 v-show="ninja.show">{{ ninja.specialty }}</h3>
       </li>
     </ul>
+
+    <button @click="deleteNinja">Delete Ninja</button>
   </div>
 </template>
 <script>
@@ -34,7 +36,17 @@ export default {
   },
   methods: {
     test: function () {
+      /**
+       * this is a reference types, so if we update ninjas data,
+       * it will update the original data on the props, and therefore will update every components that use the props
+       * different with primitive, primitve will update the data on components
+       */
+
       console.log(this.ninjas);
+    },
+    //this will delete the reference props
+    deleteNinja: function () {
+      this.ninjas.pop();
     },
   },
 };
