@@ -1,6 +1,7 @@
 <!-- create a Ninjas component-->
 <template>
   <div id="ninjas">
+      <p>{{ninjas}}</p>
       <ul>
           <li v-for="(ninja) in ninjas" v-on:click="ninja.show = !ninja.show" v-bind:key="ninja.name">
               <h2>{{ninja.name}}</h2>
@@ -14,16 +15,10 @@
 
 
 export default {
+  props: ['ninjas'],
   data () {
     return {
-        ninjas: [
-            {name: 'Ryu', specialty:'Vue Components', show: false},
-            {name: 'Crystal', specialty:'HTML Wizard', show: false},
-            {name: 'Hiroshi', specialty:'Click Events', show: false},
-            {name: 'Takagi', specialty:'Conditionals', show: false},
-            {name: 'Wataru', specialty:'Webpack', show: false},
-            {name: 'Sato', specialty:'Data Diggin', show: false},
-        ]
+    
     }
   }
 }
