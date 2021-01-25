@@ -1,23 +1,17 @@
 <template>
   <div>
-    <app-header v-bind:title="title"></app-header>
-    <!-- to send data that is dynamic, we got to use v-bind: -->
-    <ninjas v-bind:ninjas="ninjas"></ninjas>
-    <app-footer v-bind:title="title"></app-footer>
+    <h2>I am the slot title</h2>
+    <p>I am the paragraph for the slot</p>
   </div>
 </template>
 
 <script>
-import Header from "./components/Headers.vue"; //import components
-import Footer from "./components/Footer.vue"; //import components
-import Ninjas from "./components/Ninjas.vue"; //import components
+import FormHelper from "./components/formHelper.vue"; //import components
 
 export default {
   components: {
     // add components
-    "app-header": Header, //why not just use 'header' and not 'app-header'? because header is an html tag (remember <header>?)
-    "app-footer": Footer, //why not just use 'header' and not 'app-header'? because header is an html tag (remember <header>?)
-    ninjas: Ninjas, //why not just use 'header' and not 'app-header'? because header is an html tag (remember <header>?)
+    "form-helper": FormHelper,
   },
   data() {
     return {
