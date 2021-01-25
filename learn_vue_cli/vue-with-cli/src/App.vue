@@ -1,7 +1,9 @@
 <template>
   <div>
-    <h2>I am the slot title</h2>
-    <p>I am the paragraph for the slot</p>
+    <form-helper>
+      <h2>I am the slot title</h2>
+      <p>I am the paragraph for the slot</p>
+    </form-helper>
   </div>
 </template>
 
