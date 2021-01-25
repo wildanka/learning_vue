@@ -1,7 +1,7 @@
 <template>
   <div>
     <form-helper>
-      <h2 slot="title">I am the slot title</h2>
+      <h2 slot="title">{{ title }}</h2>
       <p slot="text">I am the paragraph for the slot</p>
     </form-helper>
   </div>
@@ -17,16 +17,7 @@ export default {
   },
   data() {
     return {
-      //Reference Type in props are Objects and Arrays
-      ninjas: [
-        { name: "Ryu", specialty: "Vue Components", show: false },
-        { name: "Crystal", specialty: "HTML Wizard", show: false },
-        { name: "Hiroshi", specialty: "Click Events", show: false },
-        { name: "Takagi", specialty: "Conditionals", show: false },
-        { name: "Wataru", specialty: "Webpack", show: false },
-        { name: "Sato", specialty: "Data Diggin", show: false },
-      ],
-      title: "Vue Ninjas", //Primitive Type in props are String, Number, and Boolean
+      title: "I am the dynamic slot title",
     };
   },
   methods: {},

@@ -9,10 +9,16 @@
 <script>
 export default {
   components: {},
-  data: {},
+  data: {
+    // title: "I am the dynamic slot title",
+  },
   methods: {},
 };
 </script>
 
-<style>
+
+<style scoped>
+h1 {
+  color: red;
+}
 </style>
