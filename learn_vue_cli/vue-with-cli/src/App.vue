@@ -3,8 +3,6 @@
     <app-header v-bind:title="title"></app-header>
     <!-- to send data that is dynamic, we got to use v-bind: -->
     <ninjas v-bind:ninjas="ninjas"></ninjas>
-    <hr />
-    <ninjas v-bind:ninjas="ninjas"></ninjas>
     <app-footer v-bind:title="title"></app-footer>
   </div>
 </template>
