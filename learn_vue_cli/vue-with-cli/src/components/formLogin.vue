@@ -1,18 +1,26 @@
 <template>
-  <!-- this slots will be helpfull for case : you have junior front-end developer who will develop some specific features
-  he/she don't need to create a new components on their own, without need to create their own styles
-   they just need to be concerned about where will they use the slot and how to use it,  -->
   <div>
-    <h1>Please fill out our form...</h1>
+    <h1>Welcome to Notebook, Login Here</h1>
     <form action="">
-      <div class="form-header">
-        <slot name="form-header"></slot>
-      </div>
+      <div class="form-header">Please fill form below to login</div>
       <div class="form-fields">
-        <slot name="form-fields"></slot>
+        <label for="username"></label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="username"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="password"
+          required
+        />
       </div>
       <div class="form-controls">
-        <slot name="form-controls"></slot>
+        <button>Login</button>
       </div>
       <div class="useful-links">
         <ul>
@@ -27,15 +35,8 @@
 </template>
 
 <script>
-export default {
-  components: {},
-  data: {
-    // title: "I am the dynamic slot title",
-  },
-  methods: {},
-};
+export default {};
 </script>
-
 
 <style scoped>
 h1 {
