@@ -8,7 +8,7 @@
       <div slot="form-fields">
         <input type="text" placeholder="name" required />
         <label>Your Message</label>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <textarea name="" id="" cols="30" rows="5"></textarea>
       </div>
       <div slot="form-controls">
         <button @click="handleSubmit">Submit</button>

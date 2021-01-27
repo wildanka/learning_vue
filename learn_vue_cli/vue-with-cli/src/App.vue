@@ -1,7 +1,8 @@
 <template>
   <div>
-    <form-login></form-login>
-    <form-contact></form-contact>
+    <!-- first, this will work because we set component to display form-contact, 
+    next we'll try to make components dynamic-->
+    <component is="form-contact"></component>
   </div>
 </template>
 
