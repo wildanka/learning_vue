@@ -22,6 +22,7 @@
           {{ author }}
         </option>
       </select>
+      <button @click.prevent="post">Add new Posts</button>
     </form>
     <div id="preview">
       <h3>Preview blog</h3>
@@ -34,11 +35,17 @@
         <li v-for="category in blog.categories">{{ category }}</li>
       </ul>
     </div>
+
+    <p>{{ info }}</p>
   </div>
 </template>
 
 <script>
 // Imports
+import Vue from "vue";
+import axios from "axios";
+import VueAxios from "vue-axios";
+
 export default {
   data() {
     return {
@@ -46,12 +53,35 @@ export default {
         title: "",
         content: "",
         categories: [],
-        author: "",
+        author: ""
       },
       authors: ["wildan", "tampan", "sekali"],
+      submitted: false,
+      info: ""
     };
   },
-  methods: {},
+  methods: {
+    post: function() {
+      axios
+        .post("http://jsonplaceholder.typicode.com/posts", {
+          title: this.blog.title,
+          body: this.blog.content,
+          userId: 1
+        })
+        .then(response => {
+          console.log(response);
+        })
+        .catch(err => {});
+    }
+  },
+  mounted() {
+    axios
+      .get("https://api.coindesk.com/v1/bpi/currentprice.json")
+      .then(response => {
+        this.info = response;
+        console.log(response);
+      });
+  }
 };
 </script>
 

@@ -10,12 +10,12 @@ import addBlog from "./components/addBlog.vue";
 export default {
   components: {
     // add components
-    "add-blog": addBlog,
+    "add-blog": addBlog
   },
   data() {
     return {};
   },
-  methods: {},
+  methods: {}
 };
 </script>
 
