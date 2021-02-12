@@ -1,7 +1,7 @@
 <template>
   <div id="add-blog">
     <h2>Add a New Blog Post</h2>
-    <form>
+    <form v-if="!submitted">
       <label>Blog Title:</label>
       <input type="text" v-model.lazy="blog.title" required />
       <label>Blog Content:</label>
@@ -24,6 +24,9 @@
       </select>
       <button @click.prevent="post">Add new Posts</button>
     </form>
+    <div v-if="submitted">
+      <h3>thanks for adding your post</h3>
+    </div>
     <div id="preview">
       <h3>Preview blog</h3>
       <p>Author: {{ blog.author }}</p>
@@ -70,6 +73,7 @@ export default {
         })
         .then(response => {
           console.log(response);
+          this.submitted = true;
         })
         .catch(err => {});
     }
