@@ -56,36 +56,36 @@ export default {
         title: "",
         content: "",
         categories: [],
-        author: ""
+        author: "",
       },
       authors: ["wildan", "tampan", "sekali"],
       submitted: false,
-      info: ""
+      info: "",
     };
   },
   methods: {
-    post: function() {
+    post: function () {
       axios
         .post("http://jsonplaceholder.typicode.com/posts", {
           title: this.blog.title,
           body: this.blog.content,
-          userId: 1
+          userId: 1,
         })
-        .then(response => {
+        .then((response) => {
           console.log(response);
           this.submitted = true;
         })
-        .catch(err => {});
-    }
+        .catch((err) => {});
+    },
   },
   mounted() {
     axios
       .get("https://api.coindesk.com/v1/bpi/currentprice.json")
-      .then(response => {
+      .then((response) => {
         this.info = response;
         console.log(response);
       });
-  }
+  },
 };
 </script>
 
