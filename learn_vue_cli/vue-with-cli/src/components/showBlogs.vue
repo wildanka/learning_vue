@@ -1,7 +1,8 @@
 <template>
   <div v-theme:column="" id="show-blogs">
     <h1>All Blog Articles</h1>
-    <div v-for="blog in blogs" class="single-blog" v-bind:key="blog.id">
+    <input type="text" v-model="search" placeholder="search blogs" />
+    <div v-for="blog in filteredBlogs" class="single-blog" v-bind:key="blog.id">
       <h2 v-rainbow>{{ blog.title | toUppercase }}</h2>
       <article>{{ blog.body | readMore }}</article>
     </div>
@@ -18,7 +19,8 @@ import VueAxios from "vue-axios";
 export default {
   data() {
     return {
-      blogs: null,
+      blogs: [],
+      search: "",
     };
   },
   methods: {},
@@ -32,6 +34,13 @@ export default {
         this.blogs = result.data.slice(0, 10);
       })
       .catch((err) => {});
+  },
+  computed: {
+    filteredBlogs: function () {
+      return this.blogs.filter((blog) => {
+        return blog.title.match(this.search);
+      });
+    },
   },
 };
 </script>
