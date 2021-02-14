@@ -34,6 +34,11 @@ Vue.directive("theme", {
     }
   }
 });
+
+Vue.filter("toUppercase", function(value) {
+  return value.toUpperCase();
+});
+
 // Vue.component("ninjas", Ninjas); // register the component at the main app
 new Vue({
   el: "#app",
