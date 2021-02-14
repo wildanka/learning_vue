@@ -20,6 +20,15 @@ Vue.directive("rainbow", {
   }
 });
 
+Vue.directive("theme", {
+  bind(el, binding, node) {
+    if (binding.value == "wide") {
+      el.style.maxWidth = "1200px";
+    } else if (binding.value == "narrow") {
+      el.style.maxWidth = "450px";
+    }
+  }
+});
 // Vue.component("ninjas", Ninjas); // register the component at the main app
 new Vue({
   el: "#app",
