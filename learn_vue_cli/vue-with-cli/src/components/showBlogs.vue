@@ -6,7 +6,9 @@ this is because we need to add '' (single quotation mark) to mark it as a string
 this is because now with Vue we can pass anything to vue directives, we can pass object, array, or event string, for instance : v-theme="{yourObject}}" 
 
 so now what we got to do is v-theme="'wide'" -->
-  <div v-theme="'wide'" id="show-blogs">
+  <!-- remember "v-on:click.prevent"? the "v-on" is calling a vue directive, while ":click" is the argument, 
+so now we'll try to add some arguments  -->
+  <div v-theme:column="'narrow'" id="show-blogs">
     <h1>All Blog Articles</h1>
     <div v-for="blog in blogs" class="single-blog" v-bind:key="blog.id">
       <!-- remember v-if v-on, v-for? 
