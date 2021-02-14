@@ -3,7 +3,7 @@
     <h1>All Blog Articles</h1>
     <div v-for="blog in blogs" class="single-blog" v-bind:key="blog.id">
       <h2 v-rainbow>{{ blog.title | toUppercase }}</h2>
-      <article>{{ blog.body }}</article>
+      <article>{{ blog.body | readMore }}</article>
     </div>
     <!-- <add-blog></add-blog> -->
   </div>

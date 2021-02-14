@@ -39,6 +39,10 @@ Vue.filter("toUppercase", function(value) {
   return value.toUpperCase();
 });
 
+Vue.filter("readMore", function(value) {
+  return value.slice(0, 100) + "... Read More>>";
+});
+
 // Vue.component("ninjas", Ninjas); // register the component at the main app
 new Vue({
   el: "#app",
