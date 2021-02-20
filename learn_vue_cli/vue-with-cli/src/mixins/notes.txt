@@ -1,0 +1,1 @@
+we can use mixin to externalize pieace of code you gonna use again and again (just like a helper method)

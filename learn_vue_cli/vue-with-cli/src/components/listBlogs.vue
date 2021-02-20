@@ -15,6 +15,7 @@
 import Vue from "vue";
 import axios from "axios";
 import VueAxios from "vue-axios";
+import searchMixin from "../mixins/searchMixins";
 
 export default {
   data() {
@@ -35,13 +36,7 @@ export default {
       })
       .catch((err) => {});
   },
-  computed: {
-    filteredBlogs: function () {
-      return this.blogs.filter((blog) => {
-        return blog.title.match(this.search);
-      });
-    },
-  },
+  computed: {},
   filters: {
     //move toUppercase filters to local components
     toUppercase: function (value) {
@@ -61,6 +56,7 @@ export default {
       },
     },
   },
+  mixins: [searchMixin],
 };
 </script>
 <style lang="">
