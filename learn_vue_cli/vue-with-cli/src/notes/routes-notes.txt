@@ -1,4 +1,4 @@
-setting up routes :
+#setting up routes :
 1. install by : 
     npm install vue-router
 2. create route.js
@@ -19,5 +19,23 @@ setting up routes :
         router: router <!-- add router to Vue Instances -->
     });
 
-
 5. use <router-view></router-view> in App.vue
+
+================================================
+# Hash vs History.
+try to open
+https://id.wikipedia.org/wiki/Liga_Utama_Inggris
+there if you open the page, when you click on "Daftar Isi" / table of content. 
+it will directing you to scroll to specific element on the page.
+if we click Juara then the URL will be changed to https://id.wikipedia.org/wiki/Liga_Utama_Inggris#Juara
+and then the page will be scrolled.
+
+thats how Hash work. so the Hash won't send any request to the server, but rather it lets the front-end handle out the request that using '#'
+
+while if we use History. it's just a normal request that we ususally do. by using / it will call the server every time we called 
+https://id.wikipedia.org/wiki/Liga_Utama_Inggris
+or 
+https://id.wikipedia.org/wiki/Liga_Utama_Inggris/Juara (only for example, if it exists)
+to load the data.
+
+at this moment personally, I'd think that Hash will be helpful when we create a Single Page Application (well just my hypotethic), but of course it should can be combined with history. lets find out later.

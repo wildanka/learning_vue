@@ -46,7 +46,8 @@ Vue.filter("readMore", function(value) {
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-  routes: Routes
+  routes: Routes,
+  mode: 'history'
 })
 
 // Vue.component("ninjas", Ninjas); // register the component at the main app
