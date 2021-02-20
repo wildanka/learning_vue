@@ -52,6 +52,15 @@ export default {
     //   return value.toUpperCase();
     // },
   },
+  directives: {
+    rainbow: {
+      bind(el, binding, node) {
+        // el : element itself
+        // binding : refers to the information about the connection if we passed in a value. example : v-rainbow="-this is the information-"
+        el.style.color = "#" + Math.random().toString().slice(2, 8);
+      },
+    },
+  },
 };
 </script>
 <style lang="">
