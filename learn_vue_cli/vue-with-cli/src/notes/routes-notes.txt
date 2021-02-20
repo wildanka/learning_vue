@@ -1,0 +1,23 @@
+setting up routes :
+1. install by : 
+    npm install vue-router
+2. create route.js
+3. add the routes rule in router.js such as : {path: '/', component: showBlogs},
+4. from main.js call :
+    import VueRouter from 'vue-router';
+    import Routes from './routes';
+
+    Vue.use(VueRouter);
+
+    const router = new VueRouter({
+        routes: Routes
+    })
+
+    new Vue({
+        el: "#app",
+        render: h => h(App),
+        router: router <!-- add router to Vue Instances -->
+    });
+
+
+5. use <router-view></router-view> in App.vue

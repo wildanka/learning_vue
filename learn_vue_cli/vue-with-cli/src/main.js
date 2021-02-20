@@ -1,5 +1,8 @@
 import Vue from "vue";
 import App from "./App.vue";
+import VueRouter from 'vue-router';
+import Routes from './routes';
+
 // import Ninjas from "./Ninjas.vue"; // calling ninjas component from main app
 
 // #1 create a new Vue instance as eventBus
@@ -40,8 +43,15 @@ Vue.filter("readMore", function(value) {
   return value.slice(0, 100) + "... Read More>>";
 });
 
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+  routes: Routes
+})
+
 // Vue.component("ninjas", Ninjas); // register the component at the main app
 new Vue({
   el: "#app",
-  render: h => h(App)
+  render: h => h(App),
+  router: router
 });
