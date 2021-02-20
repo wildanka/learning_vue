@@ -35,9 +35,6 @@ Vue.directive("theme", {
   }
 });
 
-Vue.filter("toUppercase", function(value) {
-  return value.toUpperCase();
-});
 
 Vue.filter("readMore", function(value) {
   return value.slice(0, 100) + "... Read More>>";

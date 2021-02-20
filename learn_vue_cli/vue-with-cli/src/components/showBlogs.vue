@@ -42,6 +42,16 @@ export default {
       });
     },
   },
+  filters: {
+    //move toUppercase filters to local components
+    toUppercase: function (value) {
+      return value.toUpperCase();
+    },
+    //can also be written as
+    // toUppercase(value) {
+    //   return value.toUpperCase();
+    // },
+  },
 };
 </script>
 <style lang="">
