@@ -5,8 +5,8 @@
       class="router-link-exact-active router-link-active"
     So, we can use it to display with css which one is active
     -->
-      <li><router-link to="/" exact>Blog</router-link></li>
-      <li><router-link to="/add" exact>Add a New Blog</router-link></li>
+      <li><router-link to="/">Blog</router-link></li>
+      <li><router-link to="/add">Add a New Blog</router-link></li>
       <!-- now try to inspect the element, 
       if we are trying to click on blog (open url "localhost:8080/" ) "Blog" will be active
       if we are trying to click on blog (open url "localhost:8080/add" ) "Add a New Blog" will be active. but Blog wil active to.
@@ -52,7 +52,7 @@ nav {
   margin-bottom: 40px;
 }
 
-.router-link-active {
+.router-link-exact-active {
   background: #eee;
   color: #444;
 }
